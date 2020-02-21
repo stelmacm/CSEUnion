@@ -1,0 +1,8 @@
+The ElasticNet (ridge and lasso) regression is performed on the data set for predicting lossCost.
+The categorical variables are converted to dummy variables.
+Bussiness type has 32 levels, which is converted to 31 binary variables and one of levels is the reference category.
+Province has 2 levels and has been converted to a binary variable.
+City has about 6000 unique levels. Hence, I overlooked this variable as it also is reflected in latitude and longitude.
+AmountofInsurance variable and also the regressand are normalized to the range of 0 and 1.
+First, Lasso is fitted on data and 10-fold cross validation is performed for chooseing lambda. Then a range of 
+alpha values have been tested and the best one is chosen based on 10-fold cross validation.
